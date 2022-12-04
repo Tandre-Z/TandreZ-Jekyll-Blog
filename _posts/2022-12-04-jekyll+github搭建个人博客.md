@@ -2,8 +2,10 @@
 title: jekyll+github搭建个人博客
 description: 也许“每一个程序员心中都有一个极客梦”，本文章记录了我博客搭建及利用Jekyll和GitHub搭建我的博客的全流程
 categories:
-- test/test
+- blog
 tags:
+- blog
+- 教程
 ---
 > 也许“每一个程序员心中都有一个极客梦”
 
