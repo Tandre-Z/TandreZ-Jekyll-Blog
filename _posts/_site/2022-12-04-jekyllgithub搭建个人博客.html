@@ -1,0 +1,102 @@
+<blockquote>
+  <p>也许“每一个程序员心中都有一个极客梦”</p>
+</blockquote>
+
+<h4 id="我的博客搭建经历">我的博客搭建经历</h4>
+
+<p>第一次搭建博客是利用腾讯云免费提供的半年的服务器，花了很长时间使用wordpress最终上线了，但还是放弃了。</p>
+
+<p>后来服务器到期，使用旧电脑自建服务器，通过内网穿透的方法再次尝试搭建，虽然也成功上线了，可旧电脑需要保持开机状态，加之换地方等过于麻烦也放弃了。</p>
+
+<p>之后比较多的是使用csdn和个人公众号，但仍想有一个自己的网站，偶然的机会发现jekyll+GitHub pages便可以轻松搭建博客，也不需要服务器，所以毅然决然踏上了这条路。</p>
+
+<h4 id="需要准备的东西">需要准备的东西</h4>
+
+<ol>
+  <li>一个GitHub账号（程序员必备）</li>
+  <li>Jekyll本地开发环境</li>
+  <li>一个markdown的编辑工具（可选）</li>
+</ol>
+
+<p>个人是因为github自带有jekyll引擎，使用时只需要编写markdown文件上传便可以，不需要每次写完后转成html再上传，相对方便很多才选择了jekyll。除此之外也可以使用hexo，相对使用上麻烦了些，但有中文文档碰到问题可以更容易解决。</p>
+
+<h4 id="搭建流程">搭建流程</h4>
+
+<h5 id="jekyll环境搭建">jekyll环境搭建</h5>
+
+<h6 id="一安装ruby">一、安装ruby</h6>
+
+<ol>
+  <li>下载安装Ruby和Devit(x64),下载地址：<a href="https://rubyinstaller.org/downloads/">https://rubyinstaller.org/downloads/</a> 这里需要安装带有Devkit的，devkit是window系统下必须的，有了它就可以不用自己去编译c/c++的源代码。</li>
+  <li>安装时基本一路next就可以了，但需要注意需要勾选添加到系统变量，最后会有一个命令窗口，输入3将两个组件一起安装就可以了</li>
+  <li>安装完成后，win+r打开“运行”，输入cmd打开命名窗口，输入<code class="language-plaintext highlighter-rouge">ruby -v</code>如果出现了ruby的版本号则说明已经安装好了。</li>
+</ol>
+
+<h6 id="二安装rubygems">二、安装Rubygems</h6>
+
+<p>它相当于ruby的包管理器，下载地址：<a href="https://rubygems.org/pages/download">https://rubygems.org/pages/download</a> 下载.zip版本直接解压缩运行就可以了，也可以到安装目录位置，按住shift右键打开终端，输入<code class="language-plaintext highlighter-rouge">ruby setup.rb</code>，等待安装完成后输入<code class="language-plaintext highlighter-rouge">gem -v</code>如果出现gem的版本号，则说明安装完成
+<img src="/assets/images/M_BlogImg/20221204/rubygem.png" alt="rubygem" /></p>
+
+<h6 id="三安装jekyll">三、安装Jekyll</h6>
+
+<p>cmd打开命令行工具，输入<code class="language-plaintext highlighter-rouge">gem install jekyll</code>，等待安装完成后，输入<code class="language-plaintext highlighter-rouge">jekyll -v</code> ，正常出现版本号即说明安装完成</p>
+
+<h5 id="下载jekyll主题">下载Jekyll主题</h5>
+
+<p>jekyll官方提供了很多的主题可以使用：<a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a>
+我使用的是<a href="https://github.com/simpleyyt/jekyll-theme-next">https://github.com/simpleyyt/jekyll-theme-next</a> 下载压缩包后解压缩，或者去它的GitHub仓库clone到自己的github然后再克隆到本地。</p>
+
+<h5 id="安装依赖开启本地服务">安装依赖，开启本地服务</h5>
+
+<p>有些模板可能需要安装包的依赖，在下载好的模板的根目录下先执行<code class="language-plaintext highlighter-rouge">gem install bundler</code>命令，来安装gem的依赖包，然后运行<code class="language-plaintext highlighter-rouge">jekyll server</code>，如果有提示run bundle install，则再执行<code class="language-plaintext highlighter-rouge">bundle install</code>,之后重复上边执行<code class="language-plaintext highlighter-rouge">jekyll server</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
+bundle <span class="nb">install
+</span>jekyll server
+</code></pre></div></div>
+
+<p>如果问题无法解决，可以尝试在安装依赖前删除gemfile.lock文件再安装，两者的区别在于不删除时则会根据该文件进行安装所需的依赖包，删除后则自动根据模板需要进行安装</p>
+
+<p>有时候可能会报错提示你run bundle exec jekyll server，只需要按要求执行<code class="language-plaintext highlighter-rouge">bundle exec jekyll exec</code> 一般第一次运行jekyll本地服务需要这样执行，后面就只需要<code class="language-plaintext highlighter-rouge">jekyll s</code>或者<code class="language-plaintext highlighter-rouge">jekyll server</code>便可以打开Jekyll 本地服务。</p>
+
+<p>如果你像我一样ruby版本过高，可能还会有缺少webrick的错误提示,只需要执行<code class="language-plaintext highlighter-rouge">bundle add webrick</code>再开启本地服务就可以了。具体可以看这里的说明：<a href="https://jekyllrb.com/docs/">https://jekyllrb.com/docs/</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle add webrick
+bundle <span class="nb">exec </span>jekyll <span class="nb">exec</span>
+</code></pre></div></div>
+
+<p>开启了本地服务后,如下图会有一个地址 http:/127.0.0.1：4000，在浏览器输入该地址便可以看到成功部署本地服务器的博客，如果这里没有出现地址，则说明仍有问题，可以根据他的输出，查找出现的问题在哪里并加以解决，通常是依赖包没有安装完全或者端口被占用。正常打开本地服务的示例如下：
+<img src="/assets\images\M_BlogImg\20221204\localserver.png" alt="loaclserver" /></p>
+
+<h5 id="github-pages">GitHub pages</h5>
+
+<p>关于GitHub的基础操作有很多相关教程，官网也提供了很详细的说明文档，可以再<a href="https://pages.github.com/">这里</a>查看GitHub pages的官方介绍。
+以下主要从博客搭建是需要设置的地方进行说明：</p>
+
+<ol>
+  <li>
+    <p>如果前面不是clone的别人的仓库则可以进入自己的GitHub新建一个仓库，把它命名为 username.github.io，示例如下图，如果是clone的仓库也可以如下图打开仓库的设置页面更改仓库名。这是一个特殊的仓库，username表示自己github的用户名，后面访问自己的博客也将使用该地址。
+<img src="/assets/images/M_BlogImg/20221204/name.png" alt="name.png" /></p>
+  </li>
+  <li>
+    <p>将模板上传到自己的仓库，仓库的层级关系应该是如下这个样子，其中的_post文件夹将是我们放我们自己写的博客的位置
+<img src="/assets/images/M_BlogImg/20221204/githubstyle.png" alt="仓库样式" /></p>
+  </li>
+  <li>
+    <p>打开创建的这个仓库，找到设置页面的pages页面，设置好分支路径，就可以通过页面上展示的那个链接访问自己的博客了
+<img src="/assets/images/M_BlogImg/20221204/pages.png" alt="pages" /></p>
+  </li>
+</ol>
+
+<h5 id="博客设置与编写">博客设置与编写</h5>
+
+<p>如果是使用的模板，一般模板的github上会有相关的使用说明可以查阅。下面将几个主要用到的地方。</p>
+
+<ol>
+  <li>_config.yml文件是一个jekyll的配置文件，可以在里面更改网站的标题名字描述等，具体的一般模板的github上会有介绍。</li>
+  <li>_posts文件夹里面是用来放我们写的博客的地方，博客需要是.md文件，命名需要为20xx-xx-xx-blogName.md,jekyll的具体结构可以参考jekyll的官方文档：<a href="https://jekyllrb.com/docs/pages/">https://jekyllrb.com/docs/pages/</a></li>
+</ol>
+
+<p>关于markdown的编写，作为程序员，我比较用得惯的是vscode，它自带有git插件，将整个文件夹添加入vscode后可以直接推送到github，非常方便。另外安装Markdown All in One,Markdown Paste,Markdown Preview Enhanced三个插件后，编写markdown也会方便很多。</p>
+
+<p>除vscode外也有很多其他的markdown工具如印象笔记、苹果的atom等，对于项目的提交，也可以单纯使用git或者github desktop，后者的界面很容易上手，git的常用命令使用习惯后相对也很快捷。</p>
