@@ -38,7 +38,7 @@ tags:
 ###### 安装Rubygems
 
 它相当于ruby的包管理器，下载地址：<https://rubygems.org/pages/download> 下载.zip版本直接解压缩运行就可以了，也可以到安装目录位置，按住shift右键打开终端，输入```ruby setup.rb```，等待安装完成后输入```gem -v```如果出现gem的版本号，则说明安装完成
-![rubygem](https://github.com/Tandre-Z/Tandre-Z.github.io/blob/main/assets/images/M_BlogImg/20221204/rubygem.png?raw=true)
+![rubygem](/assets/images/M_BlogImg/20221204/rubygem.png)
 
 ###### 安装Jekyll
 
@@ -71,7 +71,7 @@ bundle exec jekyll exec
 ```
 
 开启了本地服务后,如下图会有一个地址 http:/127.0.0.1：4000，在浏览器输入该地址便可以看到成功部署本地服务器的博客，如果这里没有出现地址，则说明仍有问题，可以根据他的输出，查找出现的问题在哪里并加以解决，通常是依赖包没有安装完全或者端口被占用。正常打开本地服务的示例如下：
-![loaclserver](https://github.com/Tandre-Z/Tandre-Z.github.io/blob/main/assets/images/M_BlogImg/20221204/localserver.png?raw=true)  
+![loaclserver](/assets/images/M_BlogImg/20221204/localserver.png)  
 
 ##### GitHub pages
 
@@ -79,13 +79,13 @@ bundle exec jekyll exec
 以下主要从博客搭建是需要设置的地方进行说明：
 
 1. 如果前面不是clone的别人的仓库则可以进入自己的GitHub新建一个仓库，把它命名为 username.github.io，示例如下图，如果是clone的仓库也可以如下图打开仓库的设置页面更改仓库名。这是一个特殊的仓库，username表示自己github的用户名，后面访问自己的博客也将使用该地址。
-   ![name.png](https://github.com/Tandre-Z/Tandre-Z.github.io/blob/main/assets/images/M_BlogImg/20221204/name.png?raw=true)
+   ![name.png](/assets/images/M_BlogImg/20221204/name.png)
 
 2. 将模板上传到自己的仓库，仓库的层级关系应该是如下这个样子，其中的_post文件夹将是我们放我们自己写的博客的位置
-   ![仓库样式](https://github.com/Tandre-Z/Tandre-Z.github.io/blob/main/assets/images/M_BlogImg/20221204/githubstyle.png?raw=true)  
+   ![仓库样式](/assets/images/M_BlogImg/20221204/githubstyle.png)  
 
 3. 打开创建的这个仓库，找到设置页面的pages页面，设置好分支路径，就可以通过页面上展示的那个链接访问自己的博客了
-![pages](https://github.com/Tandre-Z/Tandre-Z.github.io/blob/main/assets/images/M_BlogImg/20221204/pages.png?raw=true)
+![pages](/assets/images/M_BlogImg/20221204/pages.png)
 
 #### 博客设置与编写
 
