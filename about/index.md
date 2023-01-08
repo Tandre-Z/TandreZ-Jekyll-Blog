@@ -1,5 +1,5 @@
 ---
-title: 博客介绍
+title: About The Blog
 layout: page
 type: about
 ---
@@ -29,7 +29,7 @@ GitHub：<https://github.com/Tandre-Z>
 
 #### 插件
 
-1. DoTween
+1. [DoTween](https://tandre-z.github.io/2023/01/08/DoTween%E6%8F%92%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E6%80%BB%E7%BB%93/)
 2. TextMeshPro
 3. AvProVedio
 4. CineCamera
@@ -42,10 +42,10 @@ GitHub：<https://github.com/Tandre-Z>
 
 ##### 独立模块框架
 
-1. UI管理
-2. 数据表管理
-3. 场景异步加载
-4. 资源管理（Resource）
+1. [UI管理](https://tandre-z.github.io/unity%E6%A1%86%E6%9E%B6/2023/01/08/Unity%E9%A1%B9%E7%9B%AEUI%E7%AE%A1%E7%90%86%E7%AE%80%E6%98%93%E6%A1%86%E6%9E%B6/)
+2. [数据表管理](https://tandre-z.github.io/unity%E6%A1%86%E6%9E%B6/2023/01/08/Unity%E9%A1%B9%E7%9B%AE%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%AE%A1%E7%90%86%E7%AE%80%E6%98%93%E6%A1%86%E6%9E%B6/)
+3. [场景异步加载](https://tandre-z.github.io/unity%E6%A1%86%E6%9E%B6/2023/01/08/Unity%E9%A1%B9%E7%9B%AE%E5%9C%BA%E6%99%AF%E7%9A%84%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E7%AE%80%E6%98%93%E6%A1%86%E6%9E%B6/)
+4. [资源管理（Resource）](https://tandre-z.github.io/unity%E6%A1%86%E6%9E%B6/2023/01/08/Unity%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%AE%80%E6%98%93%E6%A1%86%E6%9E%B6-Resource/)
 
 #### 性能优化
 
