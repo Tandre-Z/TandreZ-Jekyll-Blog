@@ -1,9 +1,9 @@
 ---
+title: 博客介绍
 layout: page
 type: about
 ---
 
-# 博客介绍
 
 ## 创作者
 
@@ -44,6 +44,8 @@ GitHub：<https://github.com/Tandre-Z>
 
 1. UI管理
 2. 数据表管理
+3. 场景异步加载
+4. 资源管理（Resource）
 
 #### 性能优化
 
@@ -66,6 +68,7 @@ GitHub：<https://github.com/Tandre-Z>
 ### 生活笔记
 
 …………
+
 ## 其他
 
 微信公众号（内容同步推送）：
