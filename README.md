@@ -1,4 +1,4 @@
-# This is Tandre's Blog
+# Tandre's Blog
 
 使用jekyll搭建的个人博客。
 
